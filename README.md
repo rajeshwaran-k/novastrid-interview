@@ -2,7 +2,7 @@
 
 - User Registration - Completed
 - Login API (Token Generation) - Completed
-- Chat Import via Excel Sheet - Partially Completed (Validating data is pending)
+- Chat Import via Excel Sheet - Partially Completed (Validating data on upload is pending)
 
 ## Setting up
 
