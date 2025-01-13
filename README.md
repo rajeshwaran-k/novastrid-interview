@@ -22,7 +22,6 @@ DB_USERNAME=
 DB_PASSWORD=
 ```
 
-```
 - Execute follwing command to run migartion
 
 ```
@@ -42,4 +41,10 @@ npm run start:dev
 - Application will be running in port 3000
 - Import `postman-sample-request.json` into your Postman application. You will be able to see sample requests for login and signup.
 - Use `http://localhost:3000/auth/chat/bulkupload` to upload excel sheet. You can also find a `sample-sheet.xlsx` in this repo. Use key name as `file`.
+
+> [!NOTE]
+> The value for `Sender Email` in excel should be a registered user.
+
+```
+
 ```
