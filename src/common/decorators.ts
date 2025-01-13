@@ -1,4 +1,9 @@
-import { applyDecorators, createParamDecorator, ExecutionContext, UseGuards } from '@nestjs/common';
+import {
+  applyDecorators,
+  createParamDecorator,
+  ExecutionContext,
+  UseGuards,
+} from '@nestjs/common';
 import { Injectable } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 import { UserPipe } from './user-pipe';
@@ -14,9 +19,7 @@ export class OptionalJwtAuthGuard extends AuthGuard('jwt') {
 }
 
 export function Auth() {
-  return applyDecorators(
-    UseGuards(JwtAuthGuard),
-  );
+  return applyDecorators(UseGuards(JwtAuthGuard));
 }
 
 export const GetUser = createParamDecorator(
@@ -24,7 +27,7 @@ export const GetUser = createParamDecorator(
     const request = ctx.switchToHttp().getRequest();
 
     return {
-      email: request.user.email
+      email: request.user.email,
     };
   },
 );

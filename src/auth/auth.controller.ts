@@ -1,4 +1,10 @@
-import { Body, Controller, Get, Post, UploadedFile, UseInterceptors } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Post,
+  UploadedFile,
+  UseInterceptors,
+} from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { UserLoginDto, UserSignupDto } from './auth.dto';
 import { Auth, GetUserFromToken } from 'src/common/decorators';
@@ -10,13 +16,13 @@ export class AuthController {
   constructor(private readonly authService: AuthService) {}
 
   @Post('signup')
-  signup(@Body() dto: UserSignupDto){
-    return this.authService.signup(dto)
+  signup(@Body() dto: UserSignupDto) {
+    return this.authService.signup(dto);
   }
 
   @Post('login')
-  login(@Body() dto: UserLoginDto){
-    return this.authService.login(dto)
+  login(@Body() dto: UserLoginDto) {
+    return this.authService.login(dto);
   }
 
   @Auth()
@@ -26,6 +32,6 @@ export class AuthController {
     @UploadedFile() file: Express.Multer.File,
     @GetUserFromToken() user: User,
   ) {
-    return this.authService.uploadFromExcel( user, file);
+    return this.authService.uploadFromExcel(user, file);
   }
 }

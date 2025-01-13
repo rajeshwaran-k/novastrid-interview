@@ -2,7 +2,7 @@
 
 - User Registration - Completed
 - Login API (Token Generation) - Completed
-- Chat Import via Excel Sheet - Partially Completed (Validating data on upload is pending)
+- Chat Import via Excel Sheet - Completed
 
 ## Setting up
 
@@ -44,7 +44,3 @@ npm run start:dev
 
 > [!NOTE]
 > The value for `Sender Email` in excel should be a registered user.
-
-```
-
-```
